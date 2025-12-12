@@ -1,0 +1,45 @@
+<style type="text/css">
+#listView{background:0 0!important;border:0!important;padding:0!important}
+#listView .k-listview-content{display:flex!important;flex-wrap:wrap!important;gap:20px!important;padding:0!important}
+#listView .facility-item{flex:0 0 calc(50% - 10px)!important;max-width:calc(50% - 10px)!important;background:#fff!important;border-radius:12px!important;border:1px solid #e5e7eb!important;box-shadow:0 2px 8px rgba(0,0,0,.06)!important;overflow:hidden!important;transition:.2s!important;display:grid!important;grid-template-rows:180px auto auto!important;grid-template-areas:"img""title""btn"!important}
+#listView .facility-item:hover{box-shadow:0 6px 20px rgba(124,58,237,.15)!important;border-color:#7c3aed!important}
+#listView .facility-item .facility-image{grid-area:img!important;width:100%!important;height:180px!important;object-fit:contain!important;background:#f5f5f5!important}
+#listView .facility-item .facility-details{grid-area:title!important;padding:16px 16px 8px!important;text-align:center!important;min-height:0!important;margin:0!important;width:100%!important}
+#listView .facility-item .facility-details h2{font-size:16px!important;font-weight:700!important;color:#1f2937!important;margin:0!important}
+#listView .facility-item .facility-location,#listView .facility-item .tablet-details-wrapper,#listView .facility-detail-pills,#listView .detail-pill{display:none!important}
+#listView .facility-item .desktop-details-wrapper{grid-area:btn!important;padding:8px 16px 16px!important;text-align:center!important}
+#listView .facility-item .desktop-details-wrapper .pm-confirm-button{background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;border:0!important;border-radius:6px!important;color:#fff!important;font-weight:600!important;padding:10px 24px!important;font-size:13px!important;cursor:pointer!important}
+#facilityListPage .facility-list .facility-details{min-height:0!important;margin:0!important;width:auto!important}
+@media(min-width:1200px){#listView .facility-item{flex:0 0 calc(33.333% - 14px)!important;max-width:calc(33.333% - 14px)!important}}
+@media(max-width:700px){#listView .facility-item{flex:0 0 100%!important;max-width:100%!important}}
+#facilityListPage{display:flex!important;gap:32px!important;padding:24px!important;background:#f8f9fa!important}
+#facilityListPage>.filter-panel-background{display:none!important}
+form.filter-panel-wrapper,#filterPanelForm{width:280px!important;flex-shrink:0!important;background:#fff!important;border-radius:12px!important;border:1px solid #e5e7eb!important;box-shadow:0 4px 16px rgba(0,0,0,.08)!important;padding:24px!important;height:fit-content!important;position:sticky!important;top:24px!important;display:block!important}
+#search-box-wrapper{display:block!important;visibility:visible!important;opacity:1!important;margin-bottom:16px!important;position:relative!important}
+#search-box-wrapper .search-box{width:100%!important;padding:12px 40px 12px 14px!important;border-radius:8px!important;border:1px solid #d1d5db!important;font-size:14px!important;background:#f9fafb!important;box-sizing:border-box!important}
+#search-box-wrapper .fa-search{position:absolute!important;right:14px!important;top:50%!important;transform:translateY(-50%)!important;color:#7c3aed!important;cursor:pointer!important;font-size:16px!important}
+.availability-search{margin-top:0!important;padding-top:0!important;border-top:none!important}
+.availability-search .base-block{display:flex!important;flex-direction:column!important;gap:16px!important}
+.availability-search .k-datepicker{width:100%!important}
+.availability-search .k-picker-wrap{border-radius:8px!important;border:1px solid #d1d5db!important;background:#f9fafb!important;padding:4px!important}
+.availability-search .k-picker-wrap .k-input{padding:8px!important}
+.availability-search .search-btn,#filterPanelForm .pm-confirm-button{background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;border:0!important;border-radius:8px!important;color:#fff!important;font-weight:600!important;padding:12px 16px!important;width:100%!important;margin-top:8px!important;cursor:pointer!important;font-size:14px!important}
+.filter-panel{border-top:1px solid #e5e7eb!important;padding-top:20px!important;margin-top:20px!important}
+.filter-panel fieldset{border:0!important;padding:0 0 16px!important;margin:0!important}
+.filter-panel legend{font-size:13px!important;font-weight:700!important;color:#4f46e5!important;margin-bottom:12px!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+.filter-panel .filter ul{list-style:none!important;padding:0!important;margin:0!important}
+.filter-panel .filter ul li{margin:8px 0!important}
+.filter-panel .filter ul li label{display:flex!important;align-items:center!important;gap:10px!important;cursor:pointer!important;font-size:14px!important;color:#374151!important;padding:6px 0!important}
+.filter-panel input[type="checkbox"]{width:18px!important;height:18px!important;accent-color:#7c3aed!important;cursor:pointer!important}
+#facilityListPage .facility-list{flex:1!important;min-width:0!important}
+#facilityListPage .facility-items-header{display:flex!important;flex-direction:column-reverse!important}
+#facilityListPage .results-header{font-size:24px!important;font-weight:700!important;color:#fff!important;background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;padding:18px 24px!important;margin:0!important;border-radius:12px!important;text-align:center!important}
+#facilityListPage .back-action{display:inline-flex!important;align-items:center!important;gap:8px!important;margin:16px 0!important;padding:10px 16px!important;background:#fff!important;border-radius:8px!important;border:1px solid #e5e7eb!important;cursor:pointer!important;width:fit-content!important}
+#facilityListPage .back-action:hover{border-color:#7c3aed!important;background:#faf5ff!important}
+#facilityListPage .back-action .back-img{width:16px!important;height:16px!important;filter:invert(30%) sepia(90%) saturate(2000%) hue-rotate(250deg)!important}
+#facilityListPage .back-action .back-url{color:#7c3aed!important;font-weight:600!important;font-size:14px!important;text-decoration:none!important}
+#facilityListPage .results-count{color:#7c3aed!important;font-size:15px!important;font-weight:600!important;margin:12px 0!important}
+#facilityListPage .k-pager-wrap{background:#fff!important;border:0!important;border-radius:8px!important;padding:12px!important;margin-top:20px!important}
+#facilityListPage .k-pager-wrap .k-state-selected{background:#7c3aed!important;border-color:#7c3aed!important}
+@media(max-width:900px){#facilityListPage{flex-direction:column!important}form.filter-panel-wrapper,#filterPanelForm{width:100%!important;position:relative!important;top:0!important}}
+</style>
