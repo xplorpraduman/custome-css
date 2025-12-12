@@ -42,4 +42,281 @@ form.filter-panel-wrapper,#filterPanelForm{width:280px!important;flex-shrink:0!i
 #facilityListPage .k-pager-wrap{background:#fff!important;border:0!important;border-radius:8px!important;padding:12px!important;margin-top:20px!important}
 #facilityListPage .k-pager-wrap .k-state-selected{background:#7c3aed!important;border-color:#7c3aed!important}
 @media(max-width:900px){#facilityListPage{flex-direction:column!important}form.filter-panel-wrapper,#filterPanelForm{width:100%!important;position:relative!important;top:0!important}}
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    /* Background Container */
+    .sports-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg,#4f46e5 0%,#7c3aed 30%,#ec4899 100%),
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    }
+    /* Overlay Gradient */
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,#4f46e5 0%,#7c3aed 30%,#ec4899 100%);
+    z-index: 1;
+    }
+    /* Glass Morphism Card */
+    .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 2rem;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    }
+    h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+    }
+    p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    /* Sports Icons */
+    .sports-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    }
+    .sport-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    }
+    .sport-icon:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    }
+    .sport-icon img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1) brightness(2);
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+    .content {
+    padding: 2rem;
+    margin: 1rem;
+    backdrop-filter: blur(15px);
+    }
+    .sport-icon {
+    width: 60px;
+    height: 60px;
+    }
+    .sport-icon img {
+    width: 30px;
+    height: 30px;
+    }
+    .sports-icons {
+    gap: 1rem;
+    }
+    }
+    @media (max-width: 480px) {
+    .content {
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    }
+    .sports-icons {
+    gap: 0.75rem;
+    }
+    .sport-icon {
+    width: 50px;
+    height: 50px;
+    }
+    .sport-icon img {
+    width: 25px;
+    height: 25px;
+    }
+    }
+    /* Performance Optimization */
+    @media (prefers-reduced-motion: reduce) {
+    .sport-icon {
+    animation: none;
+    transition: none;
+    }
+    }
+</style>
+<div class="sports-background">
+<div class="overlay"></div>
+</div>
+<style>
+    .member-login-container .section-content {
+    max-width: 700px !important;
+    }
+    .create-account link{
+    font-size: 1.2rem !important;
+    }
+    .sign-up-wrapper{
+    font-size: 1.2rem !important;
+    }
+    .title-container h1 {
+    font-size: 2rem !important;
+    }
+    .section-title{
+    font-size: 20px;
+    }
+    .member-login-container {
+    z-index: 9999 !important;
+    }
+    .sign-up-wrapper span{
+    color : #ffff !important;
+    }
+    .member-login-container .section-content {
+    max-width: 700px !important;
+    margin: auto !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 26px 35px !important;
+    box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    color: white !important;
+    position: relative !important;
+    z-index: 10000 !important;
+    overflow: hidden !important;
+    }
+    /* Add gradient border effect */
+    .member-login-container .section-content::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: #F44E27 !important;
+    border-radius: 8px 8px 0 0 !important;
+    z-index: 1 !important;
+    }
+    /* Optional: Add subtle inner glow */
+    .member-login-container .section-content::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 1px !important;
+    left: 1px !important;
+    right: 1px !important;
+    bottom: 1px !important;
+    border-radius: 7px !important;
+    box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.1) !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    }
+    /* Ensure form elements are visible on glass background */
+    .member-login-container .section-content .section-title {
+    color: white !important;
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-weight: 700 !important;
+    }
+    .member-login-container .section-content .section-description {
+    color: rgba(255, 255, 255, 0.8) !important;
+    }
+    /* Input fields glass effect */
+    .member-login-container .section-content .xpl-input-wrapper input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 6px !important;
+    color: white !important;
+    padding: 10px 12px !important;
+    }
+    .member-login-container .section-content .xpl-input-wrapper input:focus {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    }
+    /* Labels */
+    .member-login-container .section-content .xpl-input-label,
+    .member-login-container .section-content .login-page-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+    }
+    /* Buttons */
+    .member-login-container .section-content .xpl-button {
+    background: #F44E27 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-
+    }
+    .member-login-container .section-content .xpl-button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+    }
+    /* Links */
+    .member-login-container .section-content .link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    }
+    .member-login-container .section-content .link:hover {
+    color: white !important;
+    }
+    /* For smaller screens */
+    @media (max-width: 480px) {
+    .member-login-container .section-content {
+    padding: 20px 25px !important;
+    margin: 0 15px !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    }
+    }
+</style>
 </style>
