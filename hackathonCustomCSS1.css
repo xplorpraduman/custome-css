@@ -42,4 +42,224 @@ form.filter-panel-wrapper,#filterPanelForm{width:280px!important;flex-shrink:0!i
 #facilityListPage .k-pager-wrap{background:#fff!important;border:0!important;border-radius:8px!important;padding:12px!important;margin-top:20px!important}
 #facilityListPage .k-pager-wrap .k-state-selected{background:#7c3aed!important;border-color:#7c3aed!important}
 @media(max-width:900px){#facilityListPage{flex-direction:column!important}form.filter-panel-wrapper,#filterPanelForm{width:100%!important;position:relative!important;top:0!important}}
+
+
+#main-wrapper {
+  height: 100% !important;
+  min-width: initial !important;
+}
+
+#main-content {
+  height: 100% !important;
+}
+
+#content-wrapper {
+  height: 100% !important;
+  background-color: #ffffff !important;
+}
+
+#header-wrapper {
+  border-width: 3px;
+  position: relative !important;
+  box-sizing: content-box !important;
+  min-width: initial !important;
+  width: 100%;
+}
+
+#footer-wrapper {
+  min-width: 970px;
+  position: relative;
+  bottom: 0;
+}
+
+/* ======================================================
+   HEADER / LOGO / TOP ROW
+====================================================== */
+
+.Company-logo {
+  table-layout: fixed;
+  min-width: 220px;
+  max-width: 300px;
+  max-height: 140px;
+  padding-right: 0;
+  margin-left: 34px !important;
+  padding: 10px 0;
+}
+
+#headerTopRow {
+  width: 100%;
+  padding-top: 0;
+  vertical-align: top;
+  white-space: nowrap;
+  background-color: black;
+  border: none;
+}
+
+#Td2 {
+  min-width: 750px;
+  width: 100%;
+  white-space: nowrap;
+  background: black;
+}
+
+#Td6 {
+  padding-bottom: 0.5em;
+  vertical-align: bottom;
+}
+
+#appSuiteCell {
+  min-width: 520px;
+  vertical-align: bottom;
+  padding-bottom: 0;
+}
+
+.k-link:link,
+.k-link:visited,
+.k-nav-current.k-hover .k-link {
+  color: #333 !important;
+}
+
+/* ======================================================
+   APP NAVIGATION / MENUS
+====================================================== */
+
+#appNav,
+#appNav .tab {
+  background-color: transparent;
+  color: #8c8c8c;
+}
+
+#appNav li {
+  position: relative;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+
+#appNav li:not(.k-item) {
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid black;
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#appNav .k-link {
+  font-weight: bold;
+  color: #8c8c8c;
+}
+
+#appNav .tab-active,
+#appNav .tab:hover,
+#appNav .k-link:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ======================================================
+   TOP RIGHT MENU
+====================================================== */
+
+#topNav,
+#topNav .tab {
+  background-color: transparent;
+  color: #8c8c8c;
+  border: none;
+}
+
+#topNav .tab-active,
+#topNav .tab:hover {
+  color: #ffffff;
+}
+
+#topNav a {
+  background-color: transparent;
+  color: #656565;
+  font-size: 13px;
+}
+
+/* ======================================================
+   LEFT PANEL / RELATED OBJECTS
+====================================================== */
+
+.layout-leftpanel-main .left-panel #relatedObjects .relatedObjectListItem {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.layout-leftpanel-main .left-panel #relatedObjects .relatedObjectListItem a {
+  background-color: #ffffff;
+  color: #8c8c8c;
+  border-radius: 3px;
+}
+
+.layout-leftpanel-main .left-panel #relatedObjects .relatedObjectListItemSelected a {
+  background-color: #edf4fa;
+  color: #333;
+}
+
+/* ======================================================
+   GRID / KENDO OVERRIDES
+====================================================== */
+
+.t-widget.t-grid .t-header {
+  border-top: 1px solid #cccccc !important;
+  border-bottom: 1px solid #cccccc !important;
+}
+
+.t-widget.t-grid .t-header span,
+.t-widget.t-grid .t-header a {
+  color: black;
+}
+
+.k-picker-wrap,
+.k-dropdown-wrap {
+  border-radius: 0 !important;
+}
+
+/* ======================================================
+   TABS / BUTTONS / RESET OVERRIDES
+====================================================== */
+
+.tab,
+.tab-active,
+.box-tab-caption,
+.box-tab-caption-active {
+  border-radius: 0 !important;
+  background-color: transparent;
+}
+
+.tab a,
+.tab-active a {
+  color: black;
+}
+
+.pm-confirm-button {
+  border-radius: 0 !important;
+}
+
+/* ======================================================
+   UTILITY / CLEAR FIXES
+====================================================== */
+
+.clearme {
+  height: 0 !important;
+  clear: both;
+  font-size: 0;
+  display: block;
+}
+
+/* ======================================================
+   ACCESSIBILITY / VISIBILITY FIXES
+====================================================== */
+
+.hidden-label {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 </style>
+
