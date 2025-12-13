@@ -271,8 +271,7 @@
 }
 
 /* Restore Kendo icon */
-#facilityListPage .availability-search .k-datepicker .k-icon.k-i-calendar {
-    display: inline-block !important;
+#facilityListPage .availability-search .k-icon.k-i-calendar {
     font-size: 18px !important;
     color: #9c4dcc !important;
 }
