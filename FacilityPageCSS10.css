@@ -266,11 +266,6 @@
     color: #9c4dcc !important;
 }
 
-/* IMPORTANT: override earlier icon removal */
-#facilityListPage .availability-search .k-i-calendar:before {
-    content: "📅" !important; 
-}
-
 /* =========================================================
    FILTER PANEL – ANIMATED WRAPPER
    ========================================================= */
