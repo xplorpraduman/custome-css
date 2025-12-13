@@ -1,0 +1,181 @@
+/* ================= FACILITY LIST PAGE ================= */
+<style>
+/* ======================================================
+   GLOBAL VARIABLES (SAFE)
+====================================================== */
+
+:root {
+  --g1: linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#ec4899 100%);
+  --c1:#7c3aed;
+  --c2:#4f46e5;
+  --bd:#d1d4db;
+  --bd2:#e5e7eb;
+}
+
+/* ======================================================
+   SHARED BUTTON
+====================================================== */
+
+.pm-confirm-button {
+  background:var(--g1);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-weight:600;
+  padding:12px 20px;
+  cursor:pointer;
+}
+
+/* ======================================================
+   PAGE 1 — CATEGORY / GYM BOOKING
+   <body id="bmCategoryPage">
+====================================================== */
+
+#bmCategoryPage #bm-categories {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
+}
+
+#bmCategoryPage .bm-categorybox {
+  background:#fff;
+  border-radius:12px;
+  border:1px solid var(--bd);
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
+  overflow:hidden;
+  transition:.3s;
+}
+
+#bmCategoryPage .bm-categorybox:hover {
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+  border-color:var(--c1);
+}
+
+#bmCategoryPage .bm-box-title {
+  background:var(--g1);
+  color:#fff;
+  padding:18px 20px;
+  font-size:18px;
+  font-weight:600;
+}
+
+/* ======================================================
+   PAGE 2 — FACILITY LIST
+   <body id="facilityListPage">
+====================================================== */
+
+#facilityListPage {
+  display:flex;
+  gap:32px;
+  padding:24px;
+  background:#f8f9fa;
+}
+
+#facilityListPage .filter-panel-wrapper {
+  width:280px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:12px;
+  border:1px solid var(--bd2);
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+  padding:24px;
+  position:sticky;
+  top:24px;
+}
+
+#facilityListPage .facility-list {
+  flex:1;
+  min-width:0;
+}
+
+#facilityListPage .k-listview-content {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+#facilityListPage .facility-item {
+  flex:0 0 calc(33.333% - 14px);
+  max-width:calc(33.333% - 14px);
+  background:#fff;
+  border-radius:12px;
+  border:1px solid var(--bd2);
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+@media (max-width:900px) {
+  #facilityListPage {
+    flex-direction:column;
+  }
+
+  #facilityListPage .filter-panel-wrapper {
+    width:100%;
+    position:relative;
+    top:0;
+  }
+
+  #facilityListPage .facility-item {
+    flex:0 0 100%;
+    max-width:100%;
+  }
+}
+
+/* ======================================================
+   PAGE 3 — FACILITY RESULTS / DETAIL
+   <body id="facilityResultsPage">
+====================================================== */
+
+#facilityResultsPage {
+  display:flex;
+  gap:32px;
+  padding:24px;
+}
+
+#facilityResultsPage .filter-panel-wrapper {
+  width:320px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:12px;
+  border:1px solid var(--bd2);
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+  padding:24px;
+}
+
+#facilityResultsPage .facility-list,
+#facilityResultsPage .results-wrapper {
+  flex:1;
+  min-width:0;
+}
+
+#facilityResultsPage .k-listview-content {
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+}
+
+#facilityResultsPage .facility-item {
+  flex:0 0 calc(50% - 12px);
+  max-width:calc(50% - 12px);
+}
+
+#facilityResultsPage .k-pager-wrap {
+  margin-top:24px;
+}
+
+@media (max-width:900px) {
+  #facilityResultsPage {
+    flex-direction:column;
+  }
+
+  #facilityResultsPage .facility-item {
+    flex:0 0 100%;
+    max-width:100%;
+  }
+}
+
+</style>
+<body id="bmCategoryPage">
+<body id="facilityListPage">
+<body id="facilityResultsPage">
+
