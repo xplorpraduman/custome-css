@@ -346,18 +346,6 @@
     animation: headingShimmer 3s infinite;
 }
 
-#facilityListPage .filter-panel {
-  top: 50px !important;
-  bottom: 0;
-  width: 100%;
-  padding-left: 23px;
-  padding-right: 25px;
-  background-color: #fdfdfd;
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-}
-
 /* =========================================================
    FILTER ITEMS – SOFT ENTRANCE
    ========================================================= */
