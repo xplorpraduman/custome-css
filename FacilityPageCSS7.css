@@ -1,0 +1,53 @@
+<style>
+/* =========================================================
+   ROOT VARIABLES
+   ========================================================= */
+
+#facilityListPage {
+    width: 100%;
+}
+
+/* Confirm Button */
+#facilityListPage .pm-confirm-button,
+#facilityListPage button.pm-confirm-button {
+    background: var(--g1, #007bff) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 12px 20px !important;
+    cursor: pointer !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+/* Hover & Active States */
+#facilityListPage .pm-confirm-button:hover,
+#facilityListPage button.pm-confirm-button:hover {
+    opacity: 0.9 !important;
+}
+
+#facilityListPage .pm-confirm-button:active,
+#facilityListPage button.pm-confirm-button:active {
+    transform: scale(0.98) !important;
+}
+
+/* Search Box Wrapper */
+#facilityListPage .search-box-wrapper {
+    height: 70px !important;
+    padding: 35px 0 0 20px !important;
+    background-color: #fdfdfd !important;
+    border-right: 1px solid #ffffff !important;
+    position: relative !important;
+    box-sizing: border-box;
+}
+
+/* Optional: Define CSS variable if not already defined */
+:root {
+    --g1: #0066ff;
+}
+
+</style>
