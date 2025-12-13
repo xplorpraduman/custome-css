@@ -1,0 +1,230 @@
+/* ================= FACILITY LIST PAGE ================= */
+<style>
+#facilityListPage #listView{background:0 0!important;border:0!important;padding:0!important}
+
+#facilityListPage #listView .k-listview-content{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:20px!important;
+  padding:0!important
+}
+
+#facilityListPage #listView .facility-item{
+  flex:0 0 calc(50% - 10px)!important;
+  max-width:calc(50% - 10px)!important;
+  background:#fff!important;
+  border-radius:12px!important;
+  border:1px solid #e5e7eb!important;
+  box-shadow:0 2px 8px rgba(0,0,0,.06)!important;
+  overflow:hidden!important;
+  transition:.2s!important;
+  display:grid!important;
+  grid-template-rows:180px auto auto!important;
+  grid-template-areas:"img""title""btn"!important
+}
+
+#facilityListPage #listView .facility-item:hover{
+  box-shadow:0 6px 20px rgba(124,58,237,.15)!important;
+  border-color:#7c3aed!important
+}
+
+#facilityListPage #listView .facility-item .facility-image{
+  grid-area:img!important;
+  width:100%!important;
+  height:180px!important;
+  object-fit:contain!important;
+  background:#f5f5f5!important
+}
+
+#facilityListPage #listView .facility-item .facility-details{
+  grid-area:title!important;
+  padding:16px 16px 8px!important;
+  text-align:center!important;
+  min-height:0!important;
+  margin:0!important;
+  width:100%!important
+}
+
+#facilityListPage #listView .facility-item .facility-details h2{
+  font-size:16px!important;
+  font-weight:700!important;
+  color:#1f2937!important;
+  margin:0!important
+}
+
+#facilityListPage #listView .facility-item .facility-location,
+#facilityListPage #listView .facility-item .tablet-details-wrapper,
+#facilityListPage #listView .facility-detail-pills,
+#facilityListPage #listView .detail-pill{
+  display:none!important
+}
+
+#facilityListPage #listView .facility-item .desktop-details-wrapper{
+  grid-area:btn!important;
+  padding:8px 16px 16px!important;
+  text-align:center!important
+}
+
+#facilityListPage #listView .pm-confirm-button{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;
+  border:0!important;
+  border-radius:6px!important;
+  color:#fff!important;
+  font-weight:600!important;
+  padding:10px 24px!important;
+  font-size:13px!important;
+  cursor:pointer!important
+}
+
+/* Filters */
+
+#facilityListPage{
+  display:flex!important;
+  gap:32px!important;
+  padding:24px!important;
+  background:#f8f9fa!important
+}
+
+#facilityListPage>.filter-panel-background{
+  display:none!important
+}
+
+#facilityListPage form.filter-panel-wrapper,
+#facilityListPage #filterPanelForm{
+  width:280px!important;
+  flex-shrink:0!important;
+  background:#fff!important;
+  border-radius:12px!important;
+  border:1px solid #e5e7eb!important;
+  box-shadow:0 4px 16px rgba(0,0,0,.08)!important;
+  padding:24px!important;
+  height:fit-content!important;
+  position:sticky!important;
+  top:24px!important;
+  display:block!important
+}
+
+#facilityListPage #search-box-wrapper{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  margin-bottom:16px!important;
+  position:relative!important
+}
+
+#facilityListPage #search-box-wrapper .search-box{
+  width:100%!important;
+  padding:12px 40px 12px 14px!important;
+  border-radius:8px!important;
+  border:1px solid #d1d5db!important;
+  font-size:14px!important;
+  background:#f9fafb!important
+}
+
+#facilityListPage .availability-search .search-btn,
+#facilityListPage #filterPanelForm .pm-confirm-button{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;
+  border:0!important;
+  border-radius:8px!important;
+  color:#fff!important;
+  font-weight:600!important;
+  padding:12px 16px!important;
+  width:100%!important
+}
+
+@media(min-width:1200px){
+  #facilityListPage #listView .facility-item{
+    flex:0 0 calc(33.333% - 14px)!important;
+    max-width:calc(33.333% - 14px)!important
+  }
+}
+
+@media(max-width:700px){
+  #facilityListPage #listView .facility-item{
+    flex:0 0 100%!important;
+    max-width:100%!important
+  }
+}
+
+@media(max-width:900px){
+  #facilityListPage{
+    flex-direction:column!important
+  }
+  #facilityListPage form.filter-panel-wrapper{
+    width:100%!important;
+    position:relative!important;
+    top:0!important
+  }
+}
+
+/* ================= BM WIDGET PAGE ================= */
+
+#bm-widget-start-page-body{
+  --g1:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#ec4899 100%);
+  --g2:linear-gradient(90deg,#f8f7ff,#fdf4ff);
+  --c1:#7c3aed;
+  --c2:#4f46e5;
+  --c3:#ec4899;
+  --bd:#d1d4db;
+  --bd2:#e5e7eb;
+  --txt:#000
+}
+
+#bm-widget-start-page-body .categories-wrapper{
+  overflow:hidden!important;
+  padding:10px!important
+}
+
+#bm-widget-start-page-body #bm-categories.bm-categories{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr))!important;
+  gap:20px!important;
+  height:auto!important;
+  position:static!important
+}
+
+#bm-widget-start-page-body #bm-categories .bm-categorybox{
+  position:static!important;
+  width:100%!important;
+  background:#fff!important;
+  border-radius:12px!important;
+  border:1px solid var(--bd)!important;
+  box-shadow:0 2px 12px rgba(0,0,0,.08)!important;
+  transition:.3s ease!important;
+  overflow:hidden!important
+}
+
+#bm-widget-start-page-body .bm-categorybox:hover{
+  transform:translateY(-4px)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.15)!important;
+  border-color:var(--c1)!important
+}
+
+#bm-widget-start-page-body .bm-box-title{
+  font-size:18px!important;
+  font-weight:600!important;
+  color:#fff!important;
+  margin:0!important;
+  padding:18px 20px!important;
+  background:var(--g1)!important
+}
+
+#bm-widget-start-page-body .filter-panel-wrapper{
+  display:inline-block!important;
+  width:16%!important;
+  margin:1%!important;
+  border-radius:12px!important;
+  border:1px solid var(--bd)!important;
+  box-shadow:0 2px 12px rgba(0,0,0,.08)!important
+}
+
+#bm-widget-start-page-body .pm-confirm-button{
+  background:var(--g1)!important;
+  border:none!important;
+  border-radius:8px!important;
+  color:#fff!important;
+  font-weight:600!important;
+  padding:12px 20px!important;
+  width:100%!important
+}
+</style>
