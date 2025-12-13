@@ -170,6 +170,17 @@
     transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
+#facilityListPage .filter-panel {
+  top: 50px;
+  bottom: 0;
+  width: 100%;
+  padding-left: 23px;
+  padding-right: 25px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+}
 /* Focus state */
 #facilityListPage .search-box-wrapper .search-box:focus {
     outline: none !important;
@@ -478,12 +489,10 @@
 
 /* Search Box Wrapper */
 #facilityListPage .search-box-wrapper {
-    height: 70px !important;
-    padding: 35px 0 0 20px !important;
-    background-color: #fdfdfd !important;
-    border-right: 1px solid #ffffff !important;
+    padding: 20px !important;
+    background: #ffffff !important;
+    border-radius: 14px !important;
     position: relative !important;
-    box-sizing: border-box;
 }
 
 /* Optional: Define CSS variable if not already defined */
