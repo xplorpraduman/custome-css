@@ -1,0 +1,878 @@
+<style>
+.mainMargin_mobile {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#main-wrapper {
+  background-color: transparent !important;
+}
+
+#facilityListPage {
+  font-family: "Open sans";
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#facilityListPage #initialLoadBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  z-index: 99999999;
+}
+#facilityListPage .no-results {
+  font-size: 18px;
+  line-height: 4;
+  text-align: center;
+}
+#facilityListPage h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  padding-left: 5px;
+  padding-bottom: 0;
+}
+#facilityListPage h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #4a4a4a;
+}
+#facilityListPage .filter-panel h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 23px 0 0 0;
+  color: #4a4a4a;
+  padding: 0;
+}
+#facilityListPage .filter-panel fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#facilityListPage .filter-panel fieldset legend {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 23px 0 0 0;
+  color: #4a4a4a;
+}
+#facilityListPage a.clear-filter-link {
+  display: inline-block;
+  color: #3c7eb7;
+  font-size: 15px;
+  font-weight: normal;
+}
+#facilityListPage a.clear-filter-link:focus {
+  outline: auto;
+}
+#facilityListPage a, #facilityListPage a:visited {
+  color: #0574D8;
+}
+#facilityListPage .filter-toggle-wrapper {
+  display: none;
+}
+#facilityListPage a.back-url {
+  font-size: 18px;
+  border-bottom: 1px dashed #3c7eb7;
+}
+#facilityListPage a.back-url:focus {
+  outline: auto;
+  border-bottom: none;
+}
+#facilityListPage a.clear-filter-block {
+  border-bottom: 1px dashed #3c7eb7;
+  position: absolute;
+  right: 0px;
+  top: -21px;
+  font-weight: normal;
+}
+#facilityListPage a.clear-filter-block:focus {
+  outline: auto;
+  border-bottom: none;
+}
+#facilityListPage a.show-more-toggle {
+  right: 20px;
+  top: -21px;
+  font-weight: normal;
+  border-bottom: 1px dashed #3c7eb7;
+}
+#facilityListPage a.show-more-toggle:focus {
+  outline: auto;
+  border-bottom: none;
+}
+#facilityListPage img.back-img {
+  display: inline-block;
+  outline: none;
+  position: relative;
+  top: 3px;
+  background-repeat: no-repeat;
+}
+#facilityListPage .padding-bottom {
+  padding-bottom: 5px;
+}
+#facilityListPage .back-action {
+  position: relative;
+  top: 5px;
+}
+#facilityListPage .pm-checkbox-blue + label {
+  padding-left: 25px;
+  line-height: 25px;
+  height: 18px;
+}
+#facilityListPage .pm-checkbox-blue + label:before {
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: solid 1px #cccccc;
+}
+#facilityListPage .pm-checkbox-blue:checked + label:before {
+  font-size: 20px;
+}
+#facilityListPage .pm-checkbox-blue:focus + label:before {
+  outline: auto;
+}
+#facilityListPage .search-box-wrapper {
+  height: 70px;
+  padding: 35px 0 0 20px;
+  background-color: #fdfdfd;
+  border-right: solid 1px #c0c0c0;
+  position: relative;
+}
+#facilityListPage .search-box-wrapper .search-box {
+  padding: 7px;
+  font-size: 15px;
+  font-family: 'Open Sans';
+  height: 26px;
+  width: calc(100% - 40px);
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: content-box;
+}
+#facilityListPage .search-box-wrapper .search-box::-webkit-input-placeholder {
+  opacity: 0.4;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: #222222;
+}
+#facilityListPage .search-box-wrapper .fa-search {
+  position: absolute;
+  font-size: 16px;
+  right: 32px;
+  color: #69696b;
+  top: 46px;
+}
+#facilityListPage .filter-panel-background {
+  position: absolute;
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  background-color: #fdfdfd;
+  z-index: -1;
+}
+#facilityListPage .availability-search {
+  top: 0;
+  bottom: 0;
+  padding-left: 23px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  position: relative;
+}
+#facilityListPage .availability-search .k-i-calendar:before {
+  content: none;
+}
+#facilityListPage .availability-search .search-btn {
+  font-size: 14px;
+  min-width: 0;
+  height: 40px;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 24px 15px 30px 0;
+  width: 94%;
+  max-width: 94%;
+}
+#facilityListPage .availability-search .base-block .search-input {
+  width: 100%;
+}
+#facilityListPage .availability-search .base-block span.k-datepicker.datepicker-input,
+#facilityListPage .availability-search .base-block span.k-widget.k-numerictextbox {
+  width: 94%;
+  margin-top: 20px;
+  height: 40px;
+}
+#facilityListPage .availability-search .base-block span.k-datepicker.datepicker-input span.k-picker-wrap,
+#facilityListPage .availability-search .base-block span.k-datepicker.datepicker-input span.k-picker-wrap .datepicker-input {
+  height: 40px;
+}
+#facilityListPage .availability-search .base-block .k-select {
+  border-style: none;
+}
+#facilityListPage .availability-search .base-block .k-numerictextbox.k-select {
+  width: 40px;
+}
+#facilityListPage .availability-search .advanced-block .search-btn {
+  width: 60%;
+  max-width: 60%;
+}
+#facilityListPage .availability-search .advanced-block .reset-filter-block {
+  display: inline-block;
+  width: 27%;
+  background-color: #e9e9e9;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+#facilityListPage .availability-search .advanced-block .reset-filter-block a {
+  color: #4a4a4a;
+}
+#facilityListPage .availability-search .advanced-block .reset-filter-block a:focus {
+  text-decoration: underline;
+}
+#facilityListPage .availability-search .advanced-block .reset-filter-block:hover {
+  background-color: #cbc5c5;
+}
+#facilityListPage .availability-search .advanced-block .dates {
+  padding: 10px 10px 0 0;
+}
+#facilityListPage .availability-search .advanced-block .times {
+  padding: 0 10px 0 0;
+}
+#facilityListPage .availability-search .advanced-block .k-i-clock {
+  background-size: 20px;
+  background-position: 0;
+  background-image: url("/Content/Images/clock-icon-blue.png");
+  background-repeat: no-repeat;
+}
+#facilityListPage .availability-search .advanced-block label {
+  font-family: 'Open Sans';
+  font-size: 12px;
+  color: #000000;
+}
+#facilityListPage .availability-search .advanced-block label.title {
+  font-size: 14px;
+  display: block;
+  padding-left: 5px;
+}
+#facilityListPage .availability-search .advanced-block label.num-label {
+  padding-right: 11%;
+  font-size: 15px;
+  font-style: italic;
+  vertical-align: middle;
+}
+#facilityListPage .availability-search .advanced-block .num-of-nights {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  vertical-align: middle;
+}
+#facilityListPage .availability-search .advanced-block span.k-datepicker.datepicker-input,
+#facilityListPage .availability-search .advanced-block span.k-timepicker.timepicker-input {
+  display: inline-block;
+  width: 45%;
+  height: 40px;
+  margin: 4px 0 10px 0;
+}
+#facilityListPage .availability-search .advanced-block .k-widget.k-numerictextbox {
+  width: 27%;
+  margin-top: 10px;
+}
+#facilityListPage .availability-search .advanced-block .k-numeric-wrap {
+  height: 40px;
+  width: 60px;
+}
+#facilityListPage .availability-search .advanced-block .k-input {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: none;
+}
+#facilityListPage .availability-search .advanced-block .k-picker-wrap .datepicker-input,
+#facilityListPage .availability-search .advanced-block .k-picker-wrap .timepicker-input {
+  height: 38px;
+}
+#facilityListPage .availability-search .advanced-block .k-picker-wrap .k-icon:before {
+  content: unset;
+}
+#facilityListPage .availability-search .advanced-block .k-select {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none;
+  height: 38px;
+  width: 24px;
+}
+#facilityListPage .availability-search .advanced-block .k-numerictextbox .k-select .k-link {
+  border-left: solid 1px #cccccc;
+  height: 20px;
+}
+#facilityListPage .availability-search .advanced-block .k-numerictextbox .k-select .k-link:first-child {
+  border-bottom: solid 1px #cccccc;
+}
+#facilityListPage .availability-search .advanced-block .facilities-days-view.facilities-adv-rows {
+  width: 13%;
+  display: inline-block;
+}
+#facilityListPage .availability-search .advanced-block .days-of-week {
+  margin-top: 25px;
+}
+#facilityListPage .availability-search .advanced-block .days-of-week .facilities-days-view label {
+  display: block;
+  font-size: 12px;
+  color: #222222;
+}
+#facilityListPage .availability-search .advanced-block .days-of-week .pm-checkbox-blue + label {
+  margin-top: 0;
+}
+#facilityListPage .availability-search .search-input {
+  padding: 0;
+  height: 40px;
+}
+#facilityListPage .availability-search .search-label {
+  padding-top: 38px;
+  margin-bottom: 26px;
+  margin-top: 0;
+}
+#facilityListPage .availability-search input.k-formatted-value.k-input {
+  width: 100%;
+}
+#facilityListPage .availability-search .k-state-default.k-hover, #facilityListPage .availability-search k-selected {
+  background-color: white;
+}
+#facilityListPage .availability-search span.k-icon.k-i-calendar {
+  background-position: 0;
+  background-size: 20px;
+  background-image: url("/Content/Images/icon-calendar-blue.svg");
+  background-repeat: no-repeat;
+}
+#facilityListPage .availability-search span.k-icon {
+  height: 100%;
+  width: 100%;
+}
+#facilityListPage .availability-search span.k-i-arrow-n {
+  width: 50%;
+  background-image: url("/Content/ScheduleView/images/up-arrow.png");
+  background-position: 0px 5px;
+  background-size: auto;
+}
+#facilityListPage .availability-search span.k-i-arrow-s {
+  width: 50%;
+  background-image: url("/Content/ScheduleView/images/down-arrow.png");
+  background-position: 0px 5px;
+  background-size: auto;
+}
+#facilityListPage .availability-search ::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #222222;
+  text-indent: calc(100% - 45px);
+}
+#facilityListPage .availability-search ::-moz-placeholder {
+  font-size: 12px;
+  color: #222222;
+  text-indent: calc(100% - 45px);
+}
+#facilityListPage .filter-panel-wrapper {
+  display: inline-block;
+  width: 20%;
+}
+#facilityListPage .filter-panel {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding-left: 23px;
+  padding-right: 25px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+}
+#facilityListPage .filter-panel fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#facilityListPage .filter-panel fieldset legend {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 23px 0 0 0;
+  color: #4a4a4a;
+}
+#facilityListPage .filter-panel li {
+  list-style-type: none;
+  font-size: 12px;
+  color: #4a4a4a;
+}
+#facilityListPage .filter-panel .filter {
+  position: relative;
+}
+#facilityListPage .filter-panel .mobile-filter {
+  display: none;
+}
+#facilityListPage .filter-panel a.show-more-toggle {
+  color: #0574D8;
+  font-size: 13px;
+  line-height: 25px;
+}
+#facilityListPage .filter-panel .facility-availability-filter {
+  display: none;
+}
+#facilityListPage .filter-panel .facility-availability-filter label {
+  display: block;
+}
+#facilityListPage .filter-panel .k-datepicker {
+  max-width: 90%;
+}
+#facilityListPage .filter-panel .pm-checkbox-blue {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  -webkit-appearance: none;
+}
+#facilityListPage .facility-list {
+  float: right;
+  width: 74%;
+  width: calc(80% - 70px);
+  margin: 38px 0 10px 0;
+  padding: 0 20px 0 40px;
+  display: inline-block;
+}
+#facilityListPage .facility-list .results-header {
+  font-size: 33px;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  word-wrap: break-word;
+  width: 100%;
+  padding: 0;
+  font-size: 33px;
+  font-weight: 500;
+}
+#facilityListPage .facility-list .facility-items-header {
+  padding-bottom: 40px;
+}
+#facilityListPage .facility-list .results-count {
+  font-size: 24px;
+  color: #3c7eb7;
+}
+#facilityListPage .facility-list .filter-tiles {
+  display: inline-block;
+  line-height: 2;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+#facilityListPage .facility-list .filter-tiles .tile {
+  display: inline-block;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  margin: 4px;
+  padding: 1px 8px;
+}
+#facilityListPage .facility-list .filter-tiles .tile i {
+  margin-left: 4px;
+}
+#facilityListPage .facility-list .k-listview, #facilityListPage .facility-list .k-pager-wrap {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+#facilityListPage .facility-list .k-listview li, #facilityListPage .facility-list .k-pager-wrap li {
+  border-radius: 0px;
+  height: 38px;
+  width: 38px;
+  border: 1px solid #eee;
+  font-weight: 600;
+}
+#facilityListPage .facility-list .k-listview li span, #facilityListPage .facility-list .k-pager-wrap li span {
+  line-height: 38px;
+  width: 38px;
+}
+#facilityListPage .facility-list .k-listview li a, #facilityListPage .facility-list .k-pager-wrap li a {
+  padding-top: 5px;
+  width: 38px;
+  height: 33px;
+  border: none;
+  color: #69696b;
+}
+#facilityListPage .facility-list .k-listview li a:focus, #facilityListPage .facility-list .k-pager-wrap li a:focus {
+  background: #ebebeb;
+}
+#facilityListPage .facility-list .k-listview .k-pager-info, #facilityListPage .facility-list .k-pager-wrap .k-pager-info {
+  display: none;
+}
+#facilityListPage .facility-list .k-listview .k-pager-numbers, #facilityListPage .facility-list .k-pager-wrap .k-pager-numbers {
+  margin: 12px 0;
+}
+#facilityListPage .facility-list .k-listview .k-pager-numbers .k-selected, #facilityListPage .facility-list .k-pager-wrap .k-pager-numbers .k-selected {
+  background-color: #2a7ab0;
+}
+#facilityListPage .facility-list .k-listview .k-pager-sizes, #facilityListPage .facility-list .k-pager-wrap .k-pager-sizes {
+  line-height: 38px;
+  color: #696969;
+}
+#facilityListPage .facility-list .k-listview .k-pager-sizes .k-dropdown-wrap, #facilityListPage .facility-list .k-pager-wrap .k-pager-sizes .k-dropdown-wrap {
+  border-radius: 0 !important;
+  padding: 4px;
+}
+#facilityListPage .facility-list .k-listview .k-pager-sizes .k-dropdown-wrap .k-select, #facilityListPage .facility-list .k-pager-wrap .k-pager-sizes .k-dropdown-wrap .k-select {
+  padding: 4px 0;
+}
+#facilityListPage .facility-list .facility-item {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  min-height: 217px;
+  position: relative;
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper {
+  float: right;
+  margin: 14px 16px 0 0;
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details {
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  display: block;
+  width: 100px;
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details-availability {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 11px;
+  margin-left: -10px;
+  text-align: center;
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details-availability .img:before {
+  position: relative;
+  top: 4px;
+  padding-right: 5px;
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details-availability .fully-available:before {
+  content: url("../../../../Content/Images/facility-fully-available.png");
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details-availability .partially-available:before {
+  content: url("../../../../Content/Images/facility-partially-available.png");
+}
+#facilityListPage .facility-list .facility-item .desktop-details-wrapper .desktop-details-availability .not-available:before {
+  content: url("../../../../Content/Images/facility-not-available.png");
+}
+#facilityListPage .facility-list .facility-item .tablet-details-wrapper {
+  display: none;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills {
+  margin: 10px;
+  margin-right: 22px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill {
+  margin: 5px;
+  height: 24px;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 14px;
+  color: #000000;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill.grey {
+  background-color: #E4E6EB;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill.yellow {
+  background-color: #ECFD91;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill.purple {
+  background-color: #EBE5FF;
+}
+#facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill.purple:hover {
+  background-color: #CDC9FA;
+}
+#facilityListPage .facility-list .facility-image {
+  position: absolute;
+  width: 289px;
+  height: 215px;
+  object-fit: contain;
+}
+#facilityListPage .facility-list .facility-details {
+  min-height: 155px;
+  margin-left: 305px;
+  width: calc(100% - 305px);
+  margin-bottom: 60px;
+}
+#facilityListPage .facility-list .facility-details .facility-description {
+  font-size: 15px;
+  line-height: 1.5em;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 25px;
+  margin-top: 12px;
+  color: #4a4a4a;
+}
+#facilityListPage .facility-list .facility-details .truncated {
+  max-height: 4.6em;
+}
+#facilityListPage .facility-list .facility-details h2 {
+  word-break: break-all;
+}
+#facilityListPage .facility-list .facility-details .read-more-toggle {
+  padding-left: 5px;
+}
+#facilityListPage .facility-list .facility-details .read-more-toggle:focus {
+  outline: auto;
+}
+#facilityListPage .facility-list .price-block {
+  position: absolute;
+  background-color: #fff;
+  color: #3c7eb7;
+  padding: 4px;
+  z-index: 10;
+  margin: -1px 0 0 -1px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #69696b;
+}
+#facilityListPage .facility-list .facility-type {
+  background-color: #eeeeee;
+  font-size: 15px;
+}
+#facilityListPage .facility-list .facility-location, #facilityListPage .facility-list .facility-amenities {
+  display: block;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+#facilityListPage .facility-list .facility-tag {
+  border-radius: 10px;
+  padding: 4px 10px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1800px) {
+  #facilityListPage .availability-search .advanced-block .k-widget.k-numerictextbox {
+    width: 30%;
+  }
+  #facilityListPage .availability-search .advanced-block label.num-label {
+    padding-right: 8%;
+  }
+}
+@media (max-width: 1645px) {
+  #facilityListPage .availability-search .advanced-block .k-widget.k-numerictextbox {
+    width: 26%;
+  }
+  #facilityListPage .availability-search .advanced-block .k-numeric-wrap {
+    width: 45%;
+  }
+  #facilityListPage .availability-search .advanced-block .search-btn {
+    width: 70%;
+  }
+  #facilityListPage .availability-search .advanced-block .facilities-days-view.facilities-adv-rows {
+    width: 12%;
+  }
+}
+@media (max-width: 1200px) {
+  #facilityListPage .availability-search .advanced-block .k-widget.k-numerictextbox {
+    width: 25%;
+  }
+  #facilityListPage .availability-search .advanced-block .k-numeric-wrap {
+    width: 40%;
+  }
+  #facilityListPage .availability-search .advanced-block label.num-label {
+    padding-right: 6%;
+  }
+  #facilityListPage .availability-search .advanced-block .search-btn {
+    width: 64%;
+  }
+  #facilityListPage .availability-search .advanced-block .facilities-days-view.facilities-adv-rows {
+    width: 11%;
+  }
+}
+@media (min-width: 1025px) {
+  #facilityListPage .facility-list.no-filters {
+    margin-left: 0;
+    width: calc(100% - 70px);
+  }
+}
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  #facilityListPage {
+    overflow: visible;
+  }
+  #facilityListPage .filter-toggle-wrapper {
+    display: block;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #ffffff;
+    height: 50px;
+    padding: 7px 10px;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+  }
+  #facilityListPage .filter-toggle-wrapper > div {
+    padding: 3px;
+    cursor: pointer;
+  }
+  #facilityListPage .filter-toggle-wrapper .filter-toggle {
+    display: inline-block;
+    background-color: #3c7eb7;
+    padding: 4px 18px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  #facilityListPage .filter-toggle-wrapper .clear-filter-link {
+    position: absolute;
+    right: 90px;
+  }
+  #facilityListPage .filter-panel-wrapper {
+    display: inline-block;
+    width: 100%;
+  }
+  #facilityListPage .filter-panel-wrapper .search-box-wrapper {
+    border-right: none;
+  }
+  #facilityListPage .filter-panel {
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    bottom: inherit;
+    position: relative;
+    display: none;
+  }
+  #facilityListPage .filter-panel.expanded {
+    display: block;
+  }
+  #facilityListPage .filter-panel h5:first-child {
+    margin-top: 0px;
+  }
+  #facilityListPage .filter-panel .facility-availability-filter {
+    width: calc(90% + 14px);
+  }
+  #facilityListPage .filter-panel .facility-availability-filter div {
+    display: inline-block;
+    width: calc(50% - 2px);
+    box-sizing: border-box;
+  }
+  #facilityListPage .filter-panel .facility-availability-filter div .date-picker {
+    width: 100%;
+    max-width: 100%;
+  }
+  #facilityListPage .filter-panel .facility-availability-filter div:first-of-type {
+    padding-right: 10px;
+  }
+  #facilityListPage .filter-panel .facility-availability-filter div:nth-of-type(2) {
+    padding-left: 10px;
+  }
+  #facilityListPage .filter-panel-background {
+    background-color: #fff;
+    z-index: -1;
+  }
+  #facilityListPage .facility-list {
+    margin-left: 0;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-top: 12px;
+  }
+  #facilityListPage .facility-list .facility-item .desktop-details-wrapper {
+    display: none;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper {
+    display: inline-block;
+    margin-left: 310px;
+    margin-bottom: 16px;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details {
+    width: 120px;
+    border-radius: 4px;
+    display: block;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-availability {
+    font-size: 13px;
+    color: #4a4a4a;
+    margin: 0 0 11px 3px;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-availability .img:before {
+    position: relative;
+    top: 4px;
+    padding-right: 5px;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-availability .fully-available:before {
+    content: url("../../../../Content/Images/facility-fully-available.png");
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-availability .partially-available:before {
+    content: url("../../../../Content/Images/facility-partially-available.png");
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-availability .not-available:before {
+    content: url("../../../../Content/Images/facility-not-available.png");
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper .tablet-details-hint {
+    font-size: 13px;
+    color: #7a7a7a;
+    margin: 10px 10px 10px 13px;
+    display: block;
+  }
+  #facilityListPage .k-current-page .k-pager-nav {
+    border-radius: 0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #cccccc;
+  }
+}
+@media (max-width: 420px) {
+  #facilityListPage .facility-list .facility-item {
+    padding: 12px;
+  }
+  #facilityListPage .facility-list .facility-item .facility-image {
+    display: none;
+  }
+  #facilityListPage .facility-list .facility-item .facility-details {
+    margin: 0;
+    width: calc(100% - 16px);
+  }
+  #facilityListPage .facility-list .facility-item .facility-details h2 {
+    padding: 0;
+  }
+  #facilityListPage .facility-list .facility-item .facility-detail-pills {
+    margin: 0px;
+    margin-top: 10px;
+    position: static;
+  }
+  #facilityListPage .facility-list .facility-item .facility-detail-pills .detail-pill {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-bottom: 2px;
+  }
+  #facilityListPage .facility-list .facility-item .facility-description {
+    padding-right: 0;
+  }
+  #facilityListPage .facility-list .facility-item .tablet-details-wrapper {
+    margin: 0;
+  }
+  #facilityListPage .facility-list .k-pager-wrap .k-pager-sizes {
+    position: absolute;
+    top: 13px;
+    left: 40px;
+  }
+  #facilityListPage .k-pager-sizes.k-widget.k-dropdown {
+    width: 45px;
+  }
+  #facilityListPage .k-pager-sizes.k-label {
+    margin-left: 95px;
+    position: absolute;
+  }
+  #facilityListPage .k-pager-wrap.k-dropdown {
+    width: 45px;
+  }
+    }
+</style>
