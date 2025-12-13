@@ -1,0 +1,130 @@
+<style>
+
+.mainMargin_mobile { margin-left: 0 !important; margin-right: 0 !important; } #main-wrapper { background-color: transparent !important; }
+
+/* =========================
+   CARD GRID LAYOUT
+========================= */
+#facilityListPage .facility-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  padding: 24px;
+}
+
+/* =========================
+   CARD CONTAINER
+========================= */
+#facilityListPage .facility-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 40px rgba(0,0,0,.12);
+  overflow: hidden;
+  min-height: 460px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#facilityListPage .facility-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(0,0,0,.18);
+}
+
+/* =========================
+   IMAGE (TOP)
+========================= */
+#facilityListPage .facility-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 22px 22px 0 0;
+  background: #f3f4f6;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+#facilityListPage .facility-details {
+  margin: 0;
+  width: 100%;
+  padding: 20px 22px 0;
+  flex: 1;
+}
+
+#facilityListPage .facility-details h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+#facilityListPage .facility-location,
+#facilityListPage .facility-amenities {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* =========================
+   TAG / ROOM TYPE
+========================= */
+#facilityListPage .facility-detail-pills {
+  position: static;
+  padding: 12px 22px 0;
+}
+
+#facilityListPage .detail-pill {
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* =========================
+   CTA BUTTON (BOTTOM)
+========================= */
+#facilityListPage .desktop-details-wrapper {
+  margin: 20px 22px 22px;
+  float: none;
+}
+
+#facilityListPage .desktop-details {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+}
+
+/* =========================
+   HIDE LEGACY ELEMENTS
+========================= */
+#facilityListPage .tablet-details-wrapper,
+#facilityListPage .price-block {
+  display: none !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  #facilityListPage .facility-list {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  #facilityListPage .facility-item {
+    min-height: auto;
+  }
+
+  #facilityListPage .facility-image {
+    height: 200px;
+  }
+}
+
+</style>
