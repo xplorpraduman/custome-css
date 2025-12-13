@@ -5,125 +5,118 @@
 /* =========================
    CARD GRID LAYOUT
 ========================= */
+/* =========================================================
+   FACILITY / MULTIPURPOSE ROOM – HOTEL STYLE CARD UI
+   ========================================================= */
+
+/* ---------- RESULTS GRID ---------- */
 #facilityListPage .facility-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
   padding: 24px;
+  width: 100%;
+  float: none;
+  margin-top: 10px;
 }
 
-/* =========================
-   CARD CONTAINER
-========================= */
+/* ---------- CARD CONTAINER ---------- */
 #facilityListPage .facility-item {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border-radius: 22px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 18px 40px rgba(0,0,0,.12);
-  overflow: hidden;
-  min-height: 460px;
-  transition: transform .25s ease, box-shadow .25s ease;
+  min-height: 380px;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 #facilityListPage .facility-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 55px rgba(0,0,0,.18);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
 }
 
-/* =========================
-   IMAGE (TOP)
-========================= */
+/* ---------- IMAGE (TOP) ---------- */
 #facilityListPage .facility-image {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 22px 22px 0 0;
   background: #f3f4f6;
 }
 
-/* =========================
-   CARD CONTENT
-========================= */
+/* ---------- CONTENT ---------- */
 #facilityListPage .facility-details {
   margin: 0;
+  padding: 14px 16px 0;
   width: 100%;
-  padding: 20px 22px 0;
-  flex: 1;
+  min-height: auto;
 }
 
 #facilityListPage .facility-details h2 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: #111827;
-  margin-bottom: 6px;
+  line-height: 1.3;
+  margin-bottom: 4px;
 }
 
 #facilityListPage .facility-location,
 #facilityListPage .facility-amenities {
   font-size: 13px;
   color: #6b7280;
+  padding-top: 2px;
 }
 
-/* =========================
-   TAG / ROOM TYPE
-========================= */
+/* ---------- ROOM TYPE / TAG ---------- */
 #facilityListPage .facility-detail-pills {
   position: static;
-  padding: 12px 22px 0;
+  padding: 10px 16px 0;
 }
 
 #facilityListPage .detail-pill {
-  background: #eef2ff;
-  color: #4338ca;
   font-size: 12px;
-  border-radius: 999px;
+  background: #eef2f7;
+  color: #374151;
+  border-radius: 6px;
+  padding: 4px 10px;
 }
 
-/* =========================
-   CTA BUTTON (BOTTOM)
-========================= */
+/* ---------- CTA BUTTON ---------- */
 #facilityListPage .desktop-details-wrapper {
-  margin: 20px 22px 22px;
+  margin-top: auto;
+  padding: 14px 16px 16px;
   float: none;
 }
 
 #facilityListPage .desktop-details {
   width: 100%;
   text-align: center;
-  padding: 12px 0;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  padding: 10px 0;
+  border-radius: 6px;
+  background: #1a73e8;
   color: #ffffff;
 }
 
-/* =========================
-   HIDE LEGACY ELEMENTS
-========================= */
+/* ---------- REMOVE LEGACY LIST ELEMENTS ---------- */
 #facilityListPage .tablet-details-wrapper,
 #facilityListPage .price-block {
   display: none !important;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   #facilityListPage .facility-list {
     grid-template-columns: 1fr;
     padding: 16px;
   }
 
-  #facilityListPage .facility-item {
-    min-height: auto;
-  }
-
   #facilityListPage .facility-image {
-    height: 200px;
+    height: 190px;
   }
 }
 
