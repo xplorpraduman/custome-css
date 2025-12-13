@@ -217,6 +217,106 @@
     width: 94% !important;
     height: 44px !important;
 }
+/* =========================================================
+   FACILITY ITEM – FLEX CARD
+   ========================================================= */
+#facilityListPage .facility-list .facility-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 20px 24px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.06),
+        0 24px 40px rgba(0, 0, 0, 0.08) !important;
+
+    border: none !important;
+}
+
+/* =========================================================
+   LEFT CONTENT (IMAGE + DETAILS)
+   ========================================================= */
+#facilityListPage .facility-list .facility-image {
+    position: static !important;
+    width: 260px !important;
+    height: 180px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    margin-right: 24px !important;
+}
+
+#facilityListPage .facility-list .facility-details {
+    margin: 0 !important;
+    width: auto !important;
+    flex: 1 !important;
+}
+
+/* =========================================================
+   RIGHT ACTION COLUMN
+   ========================================================= */
+#facilityListPage .facility-list .desktop-details-wrapper {
+    float: none !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 160px !important;
+    gap: 12px;
+}
+
+/* =========================================================
+   CHOOSE BUTTON – PRIMARY ACTION
+   ========================================================= */
+#facilityListPage .facility-list .desktop-details-wrapper .desktop-details {
+    width: 140px !important;
+    padding: 12px 0 !important;
+
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+    border-radius: 12px !important;
+    border: none !important;
+
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 50%,
+        #e04b9a 100%
+    ) !important;
+
+    color: #ffffff !important;
+    text-align: center !important;
+
+    cursor: pointer !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+#facilityListPage .facility-list .desktop-details-wrapper .desktop-details:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* =========================================================
+   ROOM TYPE TAG (SECONDARY)
+   ========================================================= */
+#facilityListPage .facility-list .facility-detail-pills {
+    position: static !important;
+    margin: 0 !important;
+}
+
+#facilityListPage .facility-list .facility-detail-pills .detail-pill {
+    background-color: #f1f5f9 !important;
+    font-size: 13px !important;
+    padding: 6px 12px !important;
+    border-radius: 999px !important;
+}
+
 
 /* =========================================================
    PICKER WRAP
