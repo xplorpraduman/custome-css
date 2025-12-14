@@ -1,0 +1,54 @@
+<style>
+#listView{background:0 0!important;border:0!important;padding:0!important}
+
+#listView .k-listview-content{display:flex!important;flex-wrap:wrap!important;gap:24px!important;justify-content:center!important;padding:0!important}
+
+#listView .facility-item{width:340px!important;background:#fff!important;border-radius:12px!important;border:1px solid #e5e7eb!important;box-shadow:0 2px 8px rgba(0,0,0,.06)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;transition:.2s!important}
+
+#listView .facility-item:hover{box-shadow:0 6px 20px rgba(124,58,237,.15)!important;border-color:#7c3aed!important}
+
+#listView .facility-image{width:100%!important;height:200px!important;object-fit:cover!important;background:#f5f5f5!important}
+
+#listView .facility-details{text-align:center!important;padding:16px!important;margin:0!important}
+
+#listView .facility-details h2{font-size:17px!important;font-weight:700!important;margin:0!important;color:#1f2937!important}
+
+#listView .facility-item .desktop-details-wrapper{padding:16px!important;margin-top:auto!important;text-align:center!important}
+
+#listView .facility-item .pm-confirm-button{background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;border:0!important;border-radius:6px!important;color:#fff!important;padding:10px 22px!important;font-size:14px!important}
+
+#listView .facility-location,#listView .tablet-details-wrapper,#listView .detail-pill,#listView .facility-detail-pills{display:none!important}
+
+#facilityListPage{background:#f8f9fa!important}
+
+#facilityListPage .content-wrapper{display:flex!important;gap:28px!important;padding:24px 32px!important;align-items:flex-start!important;max-width:1400px!important;margin:0 auto!important}
+
+#facilityListPage .filter-panel-wrapper{width:260px!important;background:#fff!important;border-radius:12px!important;border:1px solid #e5e7eb!important;box-shadow:0 4px 16px rgba(0,0,0,.08)!important;padding:20px!important;position:sticky!important;top:20px!important}
+
+#facilityListPage .search-box-wrapper{display:block!important;margin-bottom:16px!important}
+
+#facilityListPage .search-box-wrapper input{width:100%!important;padding:10px 12px!important;border:1px solid #d1d5db!important;border-radius:8px!important;background:#f9fafb!important;font-size:14px!important}
+
+#facilityListPage button.pm-confirm-button{background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;border:0!important;border-radius:8px!important;color:#fff!important;font-weight:600!important;padding:12px!important;width:100%!important;margin-top:8px!important}#facilityListPage .back-action::before{content:""!important}
+
+#facilityListPage .facility-list{flex:1!important;min-width:0!important}
+
+#facilityListPage .results-header{text-align:center!important;font-size:24px!important;color:#fff!important;background:linear-gradient(135deg,#4f46e5,#7c3aed 50%,#ec4899)!important;padding:18px 24px!important;border-radius:12px!important;margin-bottom:20px!important}
+
+#facilityListPage .results-count{text-align:center!important;margin:10px 0 20px!important;font-weight:600!important;color:#7c3aed!important}
+
+#facilityListPage .k-pager-wrap{background:#fff!important;border:1px solid #e5e7eb!important;border-radius:10px!important;padding:10px 20px!important;margin:30px auto!important;display:flex!important;justify-content:center!important;gap:12px!important}
+
+#facilityListPage .k-pager-wrap .k-state-selected{background:#7c3aed!important;color:#fff!important;border-radius:6px!important}
+
+@media(max-width:900px){
+
+#facilityListPage .content-wrapper{flex-direction:column!important;align-items:center!important}
+
+#facilityListPage .filter-panel-wrapper{width:100%!important;position:relative!important;top:0!important}
+
+#listView .facility-item{width:100%!important;max-width:450px!important}
+
+}
+</style>
+ 
