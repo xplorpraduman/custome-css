@@ -1,0 +1,148 @@
+<style>
+/* =========================================================
+   PAGE BACKDROP & CONTENT CONTAINER
+========================================================= */
+
+#facilityLandingPageModelContainer {
+    background: linear-gradient(180deg,#fafafa,#ffffff);
+}
+
+#facilityLandingPageModelContainer .bm-content-wrapper {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+}
+
+/* =========================================================
+   HEADER – CLEANER BALANCE
+========================================================= */
+
+#facilityLandingPageModelContainer .facility-header {
+    padding: 32px 0 26px 0 !important;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+#facilityLandingPageModelContainer .facility-header .facility-name {
+    font-size: 44px !important;
+}
+
+/* =========================================================
+   MAIN CONTENT CARD
+========================================================= */
+
+#facilityLandingPageModelContainer .col-md {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 34px 40px 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.06);
+    animation: contentFade .6s ease-out both;
+}
+
+/* =========================================================
+   STEP SECTIONS – CARD STYLE
+========================================================= */
+
+#facilityLandingPageModelContainer .facility-service-details > div,
+#facilityLandingPageModelContainer .scheduler-wrapper {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px 26px 28px;
+    margin-bottom: 26px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.05);
+    animation: stepFade .5s ease-out both;
+}
+
+/* Step number circle */
+#facilityLandingPageModelContainer .item-circle {
+    background: #fff;
+    border: none;
+    box-shadow: 0 6px 14px rgba(0,0,0,.1);
+}
+
+/* =========================================================
+   STEP HEADINGS – VISUAL FLOW
+========================================================= */
+
+#facilityLandingPageModelContainer .facility-service,
+#facilityLandingPageModelContainer .available-times-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px !important;
+}
+
+/* =========================================================
+   SCHEDULER – EMBEDDED FEEL
+========================================================= */
+
+#facilityLandingPageModelContainer .scheduler-wrapper {
+    margin-top: 10px;
+}
+
+/* Scheduler hover polish */
+#scheduler .k-event-template {
+    border-radius: 8px;
+}
+
+/* =========================================================
+   RIGHT PANEL – ALIGN WITH CONTENT
+========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md {
+    margin-top: 120px !important;
+    border-radius: 18px;
+}
+
+/* =========================================================
+   FACILITY IMAGE – HERO FEEL
+========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md img {
+    transform: scale(1);
+    transition: transform .4s ease;
+}
+
+#facilityLandingPageModelContainer .col-panel-md img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================================================
+   TYPOGRAPHY REFINEMENT
+========================================================= */
+
+#facilityLandingPageModelContainer label,
+#facilityLandingPageModelContainer p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   RESPONSIVE CLEANUP
+========================================================= */
+
+@media (max-width: 1440px) {
+    #facilityLandingPageModelContainer .bm-content-wrapper {
+        padding: 0 20px 60px;
+    }
+
+    #facilityLandingPageModelContainer .col-md {
+        padding: 26px;
+    }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes contentFade {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes stepFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
