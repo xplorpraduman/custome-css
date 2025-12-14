@@ -258,17 +258,25 @@
    RIGHT ACTION COLUMN
    ========================================================= */
 #facilityListPage .facility-list .desktop-details-wrapper {
+    position: absolute !important;
+    right: 24px !important;
+    bottom: 110px !important; /* sits above School Room */
+    
     float: none !important;
     margin: 0 !important;
 
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
     justify-content: center !important;
-
-    min-width: 160px !important;
-    gap: 12px;
 }
+
+#facilityListPage .facility-list .facility-item .facility-detail-pills {
+    position: absolute !important;
+    right: 24px !important;
+    bottom: 20px !important;
+
+    margin: 0 !important;
+}
+
 
 /* =========================================================
    CHOOSE BUTTON – PRIMARY ACTION
