@@ -118,11 +118,12 @@
 ========================================================= */
 
 #facilityLandingPageModelContainer .col-panel-md {
-    width: 22.5% !important;
+    width: 21% !important;
     float: right !important;
     margin-top: 200px !important;
     position: sticky !important;
     top: 120px !important;
+    margin-top: 200px !important;
 
     background: linear-gradient(180deg,#ffffff,#fafafa) !important;
     border-left: none !important;
