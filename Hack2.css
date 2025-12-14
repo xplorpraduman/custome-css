@@ -63,7 +63,7 @@
 #facilityLandingPageModelContainer .col-md,
 #facilityLandingPageModelContainer .additional-data-wrapper,
 #facilityLandingPageModelContainer .additional-data-wrapper-info-page {
-    width: 77.5% !important;
+    width: 76.2% !important;
     padding-right: 40px !important;
     padding-top: 10px !important;
 }
@@ -118,12 +118,12 @@
 ========================================================= */
 
 #facilityLandingPageModelContainer .col-panel-md {
-    width: 21% !important;
+    width: 20% !important;
     float: right !important;
     margin-top: 200px !important;
     position: sticky !important;
     top: 120px !important;
-    margin-top: 200px !important;
+    margin-top: 250px !important;
 
     background: linear-gradient(180deg,#ffffff,#fafafa) !important;
     border-left: none !important;
