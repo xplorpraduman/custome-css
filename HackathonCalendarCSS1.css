@@ -1,7 +1,6 @@
 <style>
 
-#facilityLandingPageModelContainer a.back-url,
-#facilityLandingPageModelContainer .back-to-facilities-list {
+#facilityLandingPageModelContainer .facility-header a.back-url {
     background: linear-gradient(
         90deg,
         #5b4bdf 0%,
@@ -9,32 +8,23 @@
         #e04b9a 100%
     ) !important;
 
-    color: #ffffff !important;
     border: none !important;
-    border-radius: 16px !important;
-
-    font-weight: 400 !important;
-    letter-spacing: 0.3px !important;
-
-    padding: 2px 20px !important;
-    height: 38px !important;
-    line-height: 44px !important;
+    border-bottom: none !important;
 
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
 
-    text-decoration: none !important;
-    cursor: pointer !important;
+    padding: 0 22px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+
+    color: #ffffff !important;
+    border-radius: 16px !important;
 
     box-shadow:
         0 6px 18px rgba(91, 75, 223, 0.28),
         0 2px 6px rgba(0, 0, 0, 0.12) !important;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        opacity 0.2s ease !important;
 }
 /* =========================================================
    FACILITY HEADER – GRADIENT TEXT (NO BACKGROUND)
@@ -90,6 +80,27 @@
     font-weight: 400 !important;
     letter-spacing: 0.3px;
 }
+/* =====================================
+   AVAILABLE TIMES HEADER – GRADIENT TEXT
+===================================== */
+#facilityLandingPageModelContainer .available-times-header {
+    background: linear-gradient(
+        90deg,
+        #4d3be4 0%,
+        #7a45da 35%,
+        #b44fcf 65%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 600; /* slightly stronger for header */
+    letter-spacing: 0.3px;
+}
+
 
 
 </style>
