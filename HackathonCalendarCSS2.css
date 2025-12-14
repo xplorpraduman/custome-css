@@ -1,0 +1,280 @@
+<style>
+
+#facilityLandingPageModelContainer .facility-header a.back-url {
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 50%,
+        #e04b9a 100%
+    ) !important;
+
+    border: none !important;
+    border-bottom: none !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 22px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+
+    color: #ffffff !important;
+    border-radius: 16px !important;
+
+    box-shadow:
+        0 6px 18px rgba(91, 75, 223, 0.28),
+        0 2px 6px rgba(0, 0, 0, 0.12) !important;
+}
+/* =========================================================
+   FACILITY HEADER – GRADIENT TEXT (NO BACKGROUND)
+   ========================================================= */
+#facilityLandingPageModelContainer .facility-header .facility-name {
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 45%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 400 !important;
+    letter-spacing: 0.4px;
+}
+.facility-header .facility-location {
+  margin-left: 40px !important;
+  font-size: 15px !important;
+}
+.facility-header .facility-location:before {
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid #ebba16;
+  content: '';
+  top: 1.4em;
+  right: .58em;
+  position: relative;
+}
+/* =========================================================
+   FACILITY SERVICE – FULL GRADIENT TEXT (NO BLACK END)
+   ========================================================= */
+#facilityLandingPageModelContainer .facility-service {
+    background: linear-gradient(
+        90deg,
+        #4d3be4 0%,
+        #7a45da 40%,
+        #b44fcf 70%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 400 !important;
+    letter-spacing: 0.3px;
+}
+/* =====================================
+   AVAILABLE TIMES HEADER – GRADIENT TEXT
+===================================== */
+#facilityLandingPageModelContainer .available-times-header {
+    background: linear-gradient(
+        90deg,
+        #4d3be4 0%,
+        #7a45da 35%,
+        #b44fcf 65%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 600; /* slightly stronger for header */
+    letter-spacing: 0.3px;
+}
+/* =========================================================
+   RIGHT PANEL – MODERNIZED & REDUCED WIDTH
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md {
+    width: 22.5% !important;
+    float: right !important;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fafafa 100%
+    ) !important;
+
+    border-left: none !important;
+    box-shadow:
+        -6px 0 18px rgba(0, 0, 0, 0.06),
+        -2px 0 6px rgba(0, 0, 0, 0.04) !important;
+
+    min-height: 520px !important;
+    padding: 20px 18px !important;
+
+    box-sizing: border-box !important;
+    position: relative !important;
+
+    animation: panelSlideIn 0.45s ease-out both;
+}
+
+/* =========================================================
+   MAIN CONTENT WIDTH ADJUSTMENT
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-md,
+#facilityLandingPageModelContainer .additional-data-wrapper,
+#facilityLandingPageModelContainer .additional-data-wrapper-info-page {
+    width: 77.5% !important;
+}
+
+/* =========================================================
+   PANEL INNER CONTENT SPACING
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md > * {
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+   PANEL HEADERS – CLEAN & PREMIUM
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md .panel-headers,
+#facilityLandingPageModelContainer .col-panel-md h4 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 45%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    margin-bottom: 14px !important;
+    letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   PANEL LIST ITEMS – CLEANER & SOFTER
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md ul {
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+#facilityLandingPageModelContainer .col-panel-md li {
+    list-style: none !important;
+    padding: 8px 0 !important;
+
+    font-size: 14px !important;
+    color: #374151 !important;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =========================================================
+   PANEL LINKS – MODERN HOVER
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md a {
+    text-decoration: none !important;
+    color: #5b4bdf !important;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease !important;
+}
+
+#facilityLandingPageModelContainer .col-panel-md a:hover {
+    color: #9c4dcc !important;
+    transform: translateX(2px);
+}
+
+/* =========================================================
+   EXTERNAL LINK BUTTONS – REFINED
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md .external-link-container a {
+    border-radius: 999px !important;
+    padding: 10px 18px !important;
+
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+
+    font-weight: 500 !important;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease !important;
+}
+
+#facilityLandingPageModelContainer .col-panel-md .external-link-container a:hover {
+    box-shadow:
+        0 8px 20px rgba(91, 75, 223, 0.18) !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   SUBTLE PANEL HOVER DEPTH
+   ========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md:hover {
+    box-shadow:
+        -10px 0 28px rgba(0, 0, 0, 0.08),
+        -4px 0 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* =========================================================
+   PANEL ENTRY ANIMATION
+   ========================================================= */
+
+@keyframes panelSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE – RESET FOR MOBILE
+   ========================================================= */
+
+@media (max-width: 1440px) {
+    #facilityLandingPageModelContainer .col-panel-md {
+        width: 100% !important;
+        box-shadow: none !important;
+        animation: none !important;
+    }
+
+    #facilityLandingPageModelContainer .col-md {
+        width: 100% !important;
+    }
+}
+
+
+
+</style>
