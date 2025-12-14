@@ -1,0 +1,249 @@
+<style>
+/* =========================================================
+   GLOBAL SMOOTHNESS
+========================================================= */
+#facilityLandingPageModelContainer * {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER – FLOW, HIERARCHY & ANIMATION
+========================================================= */
+
+#facilityLandingPageModelContainer .facility-header {
+    padding: 36px 0 22px 45px !important;
+    animation: headerFadeIn 0.6s ease-out both;
+}
+
+#facilityLandingPageModelContainer .facility-header a.back-url {
+    background: linear-gradient(90deg,#5b4bdf,#9c4dcc,#e04b9a) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    padding: 0 22px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(91,75,223,.28);
+    animation: backBtnIn .45s ease-out both;
+    transition: transform .2s ease;
+}
+
+#facilityLandingPageModelContainer .facility-header a.back-url:active {
+    transform: scale(.96);
+}
+
+/* Title */
+#facilityLandingPageModelContainer .facility-header .facility-name {
+    background: linear-gradient(90deg,#5b4bdf,#9c4dcc,#e04b9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 400 !important;
+    letter-spacing: .4px;
+    display: inline-block;
+    margin-top: 10px !important;
+    animation: titleReveal .6s ease-out both;
+}
+
+/* Location */
+#facilityLandingPageModelContainer .facility-location {
+    font-size: 15px !important;
+    opacity: .85;
+    margin-top: 4px;
+    animation: fadeUp .5s ease-out both;
+}
+
+/* =========================================================
+   MAIN CONTENT – WIDTH & FLOW
+========================================================= */
+
+#facilityLandingPageModelContainer .col-md,
+#facilityLandingPageModelContainer .additional-data-wrapper,
+#facilityLandingPageModelContainer .additional-data-wrapper-info-page {
+    width: 76.2% !important;
+    padding-right: 40px !important;
+    padding-top: 6px !important;
+}
+
+/* =========================================================
+   STEP SECTIONS – REDUCED SPACING
+========================================================= */
+
+#facilityLandingPageModelContainer .facility-service-details > div {
+    margin-bottom: 14px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+/* Step titles */
+#facilityLandingPageModelContainer .facility-service,
+#facilityLandingPageModelContainer .available-times-header {
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
+    background: linear-gradient(90deg,#4d3be4,#7a45da,#b44fcf,#e04b9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Step number circles */
+#facilityLandingPageModelContainer .item-circle {
+    margin-right: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: transform .2s ease;
+}
+#facilityLandingPageModelContainer .item-circle:hover {
+    transform: scale(1.05);
+}
+
+/* Text below step headings */
+#facilityLandingPageModelContainer .facility-service-details p,
+#facilityLandingPageModelContainer .facility-service-details label {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.5;
+}
+
+/* Inputs & selects */
+#facilityLandingPageModelContainer input,
+#facilityLandingPageModelContainer select,
+#facilityLandingPageModelContainer .k-widget {
+    margin-top: 6px !important;
+}
+
+/* Remove artificial gaps */
+#facilityLandingPageModelContainer .facility-service-details br {
+    display: none;
+}
+
+/* =========================================================
+   SCHEDULER – CARD FEEL & TIGHTER FLOW
+========================================================= */
+
+#facilityLandingPageModelContainer .scheduler-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 18px;
+    margin-top: 10px !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    animation: schedulerIn .55s ease-out both;
+}
+
+/* Scheduler hover */
+#scheduler .k-event-template {
+    transition: transform .18s ease, box-shadow .18s ease;
+    border-radius: 8px;
+}
+#scheduler .k-event-template:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.15);
+}
+
+/* =========================================================
+   RIGHT PANEL – STICKY & COMPACT
+========================================================= */
+
+#facilityLandingPageModelContainer .col-panel-md {
+    width: 19% !important;
+    float: right !important;
+    position: sticky !important;
+    top: 120px !important;
+    margin-top: 200px !important;
+
+    background: linear-gradient(180deg,#ffffff,#fafafa) !important;
+    border-left: none !important;
+    border-radius: 18px 0 0 18px;
+
+    padding: 18px 16px !important;
+    min-height: 520px !important;
+
+    box-shadow: -6px 0 18px rgba(0,0,0,.06);
+    animation: panelSlideIn .45s ease-out both;
+}
+
+/* Panel hover */
+#facilityLandingPageModelContainer .col-panel-md:hover {
+    box-shadow: -10px 0 28px rgba(0,0,0,.08);
+}
+
+/* Panel headers */
+#facilityLandingPageModelContainer .col-panel-md h4,
+#facilityLandingPageModelContainer .col-panel-md .panel-headers {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    background: linear-gradient(90deg,#5b4bdf,#9c4dcc,#e04b9a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px !important;
+}
+
+/* Panel lists */
+#facilityLandingPageModelContainer .col-panel-md ul {
+    padding: 0 !important;
+}
+#facilityLandingPageModelContainer .col-panel-md li {
+    list-style: none !important;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px dashed #e5e7eb;
+}
+#facilityLandingPageModelContainer .col-panel-md li:last-child {
+    border-bottom: none;
+}
+
+/* Panel image */
+#facilityLandingPageModelContainer .col-panel-md img {
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.18);
+    margin-bottom: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE RESET
+========================================================= */
+
+@media (max-width: 1440px) {
+    #facilityLandingPageModelContainer .col-panel-md,
+    #facilityLandingPageModelContainer .col-md {
+        width: 100% !important;
+        position: relative !important;
+        margin-top: 20px !important;
+        box-shadow: none !important;
+        animation: none !important;
+    }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes headerFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes backBtnIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes titleReveal {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes schedulerIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes panelSlideIn {
+    from { opacity: 0; transform: translateX(14px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+</style>
