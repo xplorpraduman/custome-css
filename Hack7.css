@@ -71,8 +71,8 @@
 /* Section spacing */
 #facilityLandingPageModelContainer .facility-service,
 #facilityLandingPageModelContainer .available-times-header {
-    margin-top: 34px !important;
-    margin-bottom: 14px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 
 /* Gradient headers */
@@ -97,12 +97,28 @@
 ========================================================= */
 
 #facilityLandingPageModelContainer .scheduler-wrapper {
-    background: #fff;
-    border-radius: 14px;
-    padding: 20px 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    background: linear-gradient(
+        135deg,
+        #5b4bdf 0%,
+        #9c4dcc 45%,
+        #e04b9a 100%
+    ) !important;
+
+    border-radius: 14px !important;
+    padding: 20px 18px !important;
+
+    box-shadow:
+        0 14px 34px rgba(91,75,223,.28),
+        0 6px 16px rgba(0,0,0,.12) !important;
+
     animation: schedulerIn .55s ease-out both;
 }
+#facilityLandingPageModelContainer .scheduler-wrapper > * {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+}
+
 
 /* Reserve hover */
 #scheduler .k-event-template {
@@ -184,6 +200,19 @@
 #facilityLandingPageModelContainer .col-panel-md .external-link-container a:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(91,75,223,.18);
+}
+.facility-service-details .first-row {
+    display: inline-block !important;
+    width: 100% !important;
+    margin-left: 55px !important;
+    padding-top: 20px !important;
+    height: 60px !important;
+}
+
+.facility-service-details .facility-selected-items {
+    margin-left: 55px !important;
+    margin-top: -60px !important;
+    margin-bottom: 10px !important;
 }
 
 /* =========================================================
