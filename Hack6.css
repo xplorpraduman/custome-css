@@ -11,7 +11,7 @@
 ========================================================= */
 
 #facilityLandingPageModelContainer .facility-header {
-    padding: 36px 0 22px 45px !important;
+    padding: 40px 0 28px 45px !important;
     animation: headerFadeIn 0.6s ease-out both;
 }
 
@@ -30,7 +30,6 @@
     animation: backBtnIn .45s ease-out both;
     transition: transform .2s ease;
 }
-
 #facilityLandingPageModelContainer .facility-header a.back-url:active {
     transform: scale(.96);
 }
@@ -45,7 +44,7 @@
     font-weight: 400 !important;
     letter-spacing: .4px;
     display: inline-block;
-    margin-top: 10px !important;
+    margin-top: 14px !important;
     animation: titleReveal .6s ease-out both;
 }
 
@@ -53,7 +52,7 @@
 #facilityLandingPageModelContainer .facility-location {
     font-size: 15px !important;
     opacity: .85;
-    margin-top: 4px;
+    margin-top: 6px;
     animation: fadeUp .5s ease-out both;
 }
 
@@ -66,32 +65,26 @@
 #facilityLandingPageModelContainer .additional-data-wrapper-info-page {
     width: 76.2% !important;
     padding-right: 40px !important;
-    padding-top: 6px !important;
+    padding-top: 10px !important;
 }
 
-/* =========================================================
-   STEP SECTIONS – REDUCED SPACING
-========================================================= */
-
-#facilityLandingPageModelContainer .facility-service-details > div {
-    margin-bottom: 14px !important;
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
-}
-
-/* Step titles */
+/* Section spacing */
 #facilityLandingPageModelContainer .facility-service,
 #facilityLandingPageModelContainer .available-times-header {
-    margin-top: 14px !important;
-    margin-bottom: 8px !important;
+    margin-top: 34px !important;
+    margin-bottom: 14px !important;
+}
+
+/* Gradient headers */
+#facilityLandingPageModelContainer .facility-service,
+#facilityLandingPageModelContainer .available-times-header {
     background: linear-gradient(90deg,#4d3be4,#7a45da,#b44fcf,#e04b9a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Step number circles */
+/* Step numbers */
 #facilityLandingPageModelContainer .item-circle {
-    margin-right: 8px !important;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
     transition: transform .2s ease;
 }
@@ -99,43 +92,21 @@
     transform: scale(1.05);
 }
 
-/* Text below step headings */
-#facilityLandingPageModelContainer .facility-service-details p,
-#facilityLandingPageModelContainer .facility-service-details label {
-    margin-top: 6px !important;
-    margin-bottom: 6px !important;
-    line-height: 1.5;
-}
-
-/* Inputs & selects */
-#facilityLandingPageModelContainer input,
-#facilityLandingPageModelContainer select,
-#facilityLandingPageModelContainer .k-widget {
-    margin-top: 6px !important;
-}
-
-/* Remove artificial gaps */
-#facilityLandingPageModelContainer .facility-service-details br {
-    display: none;
-}
-
 /* =========================================================
-   SCHEDULER – CARD FEEL & TIGHTER FLOW
+   SCHEDULER – CARD FEEL & INTERACTION
 ========================================================= */
 
 #facilityLandingPageModelContainer .scheduler-wrapper {
     background: #fff;
     border-radius: 14px;
-    padding: 18px 18px;
-    margin-top: 10px !important;
+    padding: 20px 18px;
     box-shadow: 0 12px 30px rgba(0,0,0,.06);
     animation: schedulerIn .55s ease-out both;
 }
 
-/* Scheduler hover */
+/* Reserve hover */
 #scheduler .k-event-template {
     transition: transform .18s ease, box-shadow .18s ease;
-    border-radius: 8px;
 }
 #scheduler .k-event-template:hover {
     transform: translateY(-2px);
@@ -143,28 +114,29 @@
 }
 
 /* =========================================================
-   RIGHT PANEL – STICKY & COMPACT
+   RIGHT PANEL – STICKY, CLEAN & PREMIUM
 ========================================================= */
 
 #facilityLandingPageModelContainer .col-panel-md {
     width: 19% !important;
     float: right !important;
+    margin-top: 200px !important;
     position: sticky !important;
     top: 120px !important;
-    margin-top: 200px !important;
+    margin-top: 250px !important;
 
     background: linear-gradient(180deg,#ffffff,#fafafa) !important;
     border-left: none !important;
     border-radius: 18px 0 0 18px;
 
-    padding: 18px 16px !important;
+    padding: 20px 18px !important;
     min-height: 520px !important;
 
     box-shadow: -6px 0 18px rgba(0,0,0,.06);
     animation: panelSlideIn .45s ease-out both;
 }
 
-/* Panel hover */
+/* Panel hover depth */
 #facilityLandingPageModelContainer .col-panel-md:hover {
     box-shadow: -10px 0 28px rgba(0,0,0,.08);
 }
@@ -177,16 +149,16 @@
     background: linear-gradient(90deg,#5b4bdf,#9c4dcc,#e04b9a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 12px !important;
+    margin-bottom: 14px !important;
 }
 
-/* Panel lists */
+/* Panel list */
 #facilityLandingPageModelContainer .col-panel-md ul {
     padding: 0 !important;
 }
 #facilityLandingPageModelContainer .col-panel-md li {
     list-style: none !important;
-    padding: 6px 0;
+    padding: 8px 0;
     font-size: 14px;
     color: #374151;
     border-bottom: 1px dashed #e5e7eb;
@@ -199,7 +171,19 @@
 #facilityLandingPageModelContainer .col-panel-md img {
     border-radius: 14px;
     box-shadow: 0 10px 28px rgba(0,0,0,.18);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+/* External links */
+#facilityLandingPageModelContainer .col-panel-md .external-link-container a {
+    border-radius: 999px !important;
+    background: #fff !important;
+    border: 1px solid #e5e7eb !important;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+#facilityLandingPageModelContainer .col-panel-md .external-link-container a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91,75,223,.18);
 }
 
 /* =========================================================
@@ -245,5 +229,4 @@
     from { opacity: 0; transform: translateX(14px); }
     to { opacity: 1; transform: translateX(0); }
 }
-
 </style>
