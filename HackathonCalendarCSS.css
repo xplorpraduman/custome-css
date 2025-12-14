@@ -1,0 +1,95 @@
+<style>
+
+#facilityLandingPageModelContainer a.back-url,
+#facilityLandingPageModelContainer .back-to-facilities-list {
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 50%,
+        #e04b9a 100%
+    ) !important;
+
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 16px !important;
+
+    font-weight: 400 !important;
+    letter-spacing: 0.3px !important;
+
+    padding: 2px 20px !important;
+    height: 38px !important;
+    line-height: 44px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-decoration: none !important;
+    cursor: pointer !important;
+
+    box-shadow:
+        0 6px 18px rgba(91, 75, 223, 0.28),
+        0 2px 6px rgba(0, 0, 0, 0.12) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease !important;
+}
+/* =========================================================
+   FACILITY HEADER – GRADIENT TEXT (NO BACKGROUND)
+   ========================================================= */
+#facilityLandingPageModelContainer .facility-header .facility-name {
+    background: linear-gradient(
+        90deg,
+        #5b4bdf 0%,
+        #9c4dcc 45%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 400 !important;
+    letter-spacing: 0.4px;
+}
+.facility-header .facility-location {
+  margin-left: 40px !important;
+  font-size: 15px !important;
+}
+.facility-header .facility-location:before {
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid #ebba16;
+  content: '';
+  top: 1.4em;
+  right: .58em;
+  position: relative;
+}
+/* =========================================================
+   FACILITY SERVICE – FULL GRADIENT TEXT (NO BLACK END)
+   ========================================================= */
+#facilityLandingPageModelContainer .facility-service {
+    background: linear-gradient(
+        90deg,
+        #4d3be4 0%,
+        #7a45da 40%,
+        #b44fcf 70%,
+        #e04b9a 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    font-weight: 400 !important;
+    letter-spacing: 0.3px;
+}
+
+
+</style>
