@@ -1,0 +1,455 @@
+<style type="text/css">
+/* =========================================================
+   ROOT VARIABLES & PAGE LAYOUT
+   ========================================================= */
+:root {
+    --gradient-primary: linear-gradient(135deg, #5b4bdf 0%, #9c4dcc 50%, #e04b9a 100%);
+    --color-primary: #7c3aed;
+    --color-primary-dark: #5b4bdf;
+    --color-accent: #ec4899;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 6px 20px rgba(124, 58, 237, 0.15);
+}
+
+#facilityListPage {
+    display: flex !important;
+    gap: 32px !important;
+    padding: 24px !important;
+    background: #f8f9fa !important;
+    width: 100%;
+}
+
+#facilityListPage > .filter-panel-background {
+    display: none !important;
+}
+
+/* =========================================================
+   SIDEBAR - FILTER PANEL
+   ========================================================= */
+form.filter-panel-wrapper,
+#filterPanelForm {
+    width: 300px !important;
+    flex-shrink: 0 !important;
+    background: #ffffff !important;
+    border-radius: var(--border-radius-md) !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: var(--shadow-md) !important;
+    padding: 24px !important;
+    height: fit-content !important;
+    position: sticky !important;
+    top: 24px !important;
+    display: block !important;
+}
+
+/* Search Box */
+#search-box-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 16px !important;
+    position: relative !important;
+}
+
+#search-box-wrapper .search-box {
+    width: 100% !important;
+    padding: 12px 40px 12px 14px !important;
+    border-radius: var(--border-radius-sm) !important;
+    border: 1px solid #d1d5db !important;
+    font-size: 14px !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
+}
+
+#search-box-wrapper .search-box:focus {
+    outline: none !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+}
+
+#search-box-wrapper .fa-search {
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: var(--color-primary) !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+}
+
+/* Date Picker */
+.availability-search {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+
+.availability-search .base-block {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+.availability-search .k-datepicker {
+    width: 100% !important;
+}
+
+.availability-search .k-picker-wrap {
+    border-radius: var(--border-radius-sm) !important;
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+    padding: 4px !important;
+    transition: all 0.2s ease !important;
+}
+
+.availability-search .k-datepicker.k-state-focused .k-picker-wrap {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+}
+
+.availability-search .k-picker-wrap .k-input {
+    padding: 8px !important;
+    border: none !important;
+    font-size: 14px !important;
+}
+
+.availability-search .k-icon.k-i-calendar {
+    color: var(--color-primary) !important;
+    font-size: 16px !important;
+}
+
+/* Check Availability Button */
+.availability-search .search-btn,
+#filterPanelForm .pm-confirm-button {
+    background: var(--gradient-primary) !important;
+    border: 0 !important;
+    border-radius: var(--border-radius-sm) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+    cursor: pointer !important;
+    font-size: 15px !important;
+    transition: all 0.2s ease !important;
+}
+
+.availability-search .search-btn:hover,
+#filterPanelForm .pm-confirm-button:hover {
+    opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* Filter Sections */
+.filter-panel {
+    border-top: 1px solid #e5e7eb !important;
+    padding-top: 20px !important;
+    margin-top: 20px !important;
+}
+
+.filter-panel fieldset {
+    border: 0 !important;
+    padding: 0 0 16px !important;
+    margin: 0 0 16px 0 !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+}
+
+.filter-panel fieldset:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+}
+
+.filter-panel legend {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-bottom: 12px !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+.filter-panel .filter ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.filter-panel .filter ul li {
+    margin: 10px 0 !important;
+}
+
+.filter-panel .filter ul li label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    color: #374151 !important;
+    padding: 6px 0 !important;
+    transition: color 0.2s ease !important;
+}
+
+.filter-panel .filter ul li label:hover {
+    color: var(--color-primary) !important;
+}
+
+.filter-panel input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: var(--color-primary) !important;
+    cursor: pointer !important;
+    border-radius: 4px !important;
+}
+
+/* =========================================================
+   MAIN CONTENT - FACILITY LIST
+   ========================================================= */
+#facilityListPage .facility-list {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+#facilityListPage .facility-items-header {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 24px !important;
+}
+
+/* Header Title */
+#facilityListPage .results-header {
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    background: var(--gradient-primary) !important;
+    padding: 24px 32px !important;
+    margin: 0 0 16px 0 !important;
+    border-radius: var(--border-radius-lg) !important;
+    text-align: center !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Back Button */
+#facilityListPage .back-action {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 0 16px 0 !important;
+    padding: 10px 18px !important;
+    background: var(--gradient-primary) !important;
+    border-radius: var(--border-radius-sm) !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: fit-content !important;
+    transition: all 0.2s ease !important;
+}
+
+#facilityListPage .back-action:hover {
+    opacity: 0.9 !important;
+    transform: translateX(-2px) !important;
+}
+
+#facilityListPage .back-action .back-img {
+    width: 16px !important;
+    height: 16px !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+#facilityListPage .back-action .back-url {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+}
+
+/* Results Count */
+#facilityListPage .results-count {
+    color: var(--color-primary) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 12px 0 20px 0 !important;
+}
+
+/* =========================================================
+   FACILITY CARDS - LIST VIEW
+   ========================================================= */
+#listView {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+#listView .k-listview-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 0 !important;
+}
+
+#listView .facility-item {
+    display: flex !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    border-radius: var(--border-radius-lg) !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: var(--shadow-sm) !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    padding: 20px !important;
+    gap: 20px !important;
+}
+
+#listView .facility-item:hover {
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--color-primary) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Facility Image */
+#listView .facility-item .facility-image {
+    width: 260px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: var(--border-radius-md) !important;
+    flex-shrink: 0 !important;
+}
+
+/* Facility Details */
+#listView .facility-item .facility-details {
+    flex: 1 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+}
+
+#listView .facility-item .facility-details h2 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.3 !important;
+}
+
+/* Room Type Tag */
+#listView .facility-item .facility-detail-pills {
+    margin-top: 12px !important;
+}
+
+#listView .facility-item .facility-detail-pills .detail-pill {
+    display: inline-block !important;
+    background: #f3f4f6 !important;
+    color: #6b7280 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+}
+
+/* Choose Button */
+#listView .facility-item .desktop-details-wrapper {
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+}
+
+#listView .facility-item .desktop-details-wrapper .pm-confirm-button,
+#listView .facility-item .desktop-details-wrapper .desktop-details {
+    background: var(--gradient-primary) !important;
+    border: 0 !important;
+    border-radius: var(--border-radius-md) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding: 12px 32px !important;
+    font-size: 15px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+#listView .facility-item .desktop-details-wrapper .pm-confirm-button:hover,
+#listView .facility-item .desktop-details-wrapper .desktop-details:hover {
+    opacity: 0.9 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(124, 58, 237, 0.25) !important;
+}
+
+/* Hide unwanted elements */
+#listView .facility-item .facility-location,
+#listView .facility-item .tablet-details-wrapper {
+    display: none !important;
+}
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+#facilityListPage .k-pager-wrap {
+    background: #ffffff !important;
+    border: 0 !important;
+    border-radius: var(--border-radius-sm) !important;
+    padding: 16px !important;
+    margin-top: 24px !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+#facilityListPage .k-pager-wrap .k-state-selected {
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 1024px) {
+    #facilityListPage {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    form.filter-panel-wrapper,
+    #filterPanelForm {
+        width: 100% !important;
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    #listView .facility-item {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    #listView .facility-item .facility-image {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    #listView .facility-item .desktop-details-wrapper {
+        margin-left: 0 !important;
+        margin-top: 16px !important;
+    }
+
+    #listView .facility-item .desktop-details-wrapper .pm-confirm-button,
+    #listView .facility-item .desktop-details-wrapper .desktop-details {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #facilityListPage {
+        padding: 16px !important;
+    }
+
+    #facilityListPage .results-header {
+        font-size: 24px !important;
+        padding: 20px !important;
+    }
+
+    form.filter-panel-wrapper,
+    #filterPanelForm {
+        padding: 20px !important;
+    }
+}
+</style>
